@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Universo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="nav nav-tabs">
+        <li class="nav-item">
+          <button class="nav-link"><%= link_to "ALIENS", aliens_path %></button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link"><%= link_to "PLANETS", planets_path %></button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link"><%= link_to "POWERS", powers_path %></button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link active"><%= link_to "WELCOMES", root_path %></button>
+        </li>
+    </div>
+    <%= yield %>
+  </body>
+</html>
